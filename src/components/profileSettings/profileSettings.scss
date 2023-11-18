@@ -1,0 +1,98 @@
+@import "../../style.scss";
+
+.profileSettings {
+  @include themify($themes) {
+    @include mobile {
+      width: 40rem;
+      top: 5.6rem;
+      margin-right: 2.4rem;
+    }
+    z-index: 999;
+    background-color: themed("bg");
+    color: themed("textColor");
+    width: 40rem;
+    height: 45rem;
+    position: absolute;
+    top: 6.3rem;
+    right: -5rem;
+    padding: 0.1rem;
+    box-shadow: 0.1rem 0.2rem 1.2rem -0.2rem rgba(9, 11, 13, 0.51);
+    -webkit-box-shadow: 0.1rem 0.2rem 1.2rem -0.2rem rgba(9, 11, 13, 0.51);
+    -moz-box-shadow: 0.1rem 0.2rem 1.2rem -0.2rem rgba(9, 11, 13, 0.51);
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+
+    .menus {
+      display: flex;
+      flex-direction: column;
+      .link-profile {
+        text-decoration: none;
+        display: flex;
+        gap: 1.5rem;
+        align-items: center;
+        color: themed("textColor");
+        padding: 1rem;
+        box-shadow: 0.1rem 0.2rem 1.2rem -0.2rem rgba(9, 11, 13, 0.51);
+        -webkit-box-shadow: 0.1rem 0.2rem 1.2rem -0.2rem rgba(9, 11, 13, 0.51);
+        -moz-box-shadow: 0.1rem 0.2rem 1.2rem -0.2rem rgba(9, 11, 13, 0.51);
+        border-radius: 0.5rem;
+        -webkit-border-radius: 0.5rem;
+        -moz-border-radius: 0.5rem;
+        -ms-border-radius: 0.5rem;
+        -o-border-radius: 0.5rem;
+        &:hover {
+          background: themed("hvr");
+          color: darkblue;
+          border-radius: 0.5rem;
+          -webkit-border-radius: 0.5rem;
+          -moz-border-radius: 0.5rem;
+          -ms-border-radius: 0.5rem;
+          -o-border-radius: 0.5rem;
+          cursor: pointer;
+        }
+      }
+
+      .item {
+        display: flex;
+        flex-direction: column;
+        font-size: 1.6rem;
+        font-weight: bold;
+        .icon {
+          width: 3rem;
+          height: 3rem;
+          padding: 0.5rem;
+          border: 0.5rem solid themed("border");
+          background-color: rgba(128, 128, 128, 0.493);
+          border-radius: 50%;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          -ms-border-radius: 50%;
+          -o-border-radius: 50%;
+        }
+        .link {
+          text-decoration: none;
+          display: flex;
+          gap: 1.5rem;
+          color: themed("textColor");
+          align-items: center;
+          padding: 1.2rem;
+          cursor: pointer;
+
+          &:hover {
+            background: themed("hvr");
+            color: darkblue;
+            border-radius: 0.5rem;
+            -webkit-border-radius: 0.5rem;
+            -moz-border-radius: 0.5rem;
+            -ms-border-radius: 0.5rem;
+            -o-border-radius: 0.5rem;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

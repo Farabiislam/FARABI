@@ -1,0 +1,27 @@
+@import "../../style.scss";
+/*     font-family: 'Noto Sans', sans-serif;
+font-family: 'Open Sans', sans-serif; */
+.home {
+  @include themify($themes) {
+    @include mobile {
+      font-weight: 400;
+      overflow: hidden;
+    }
+    font-weight: 500;
+    background-color: themed("bgSoft");
+    display: flex;
+    .left {
+      flex: 3;
+    }
+    .home_container {
+      padding: 2rem 1rem;
+      flex: 6;
+      @include mobile {
+        padding: 0rem;
+      }
+    }
+    .right {
+      flex: 3;
+    }
+  }
+}

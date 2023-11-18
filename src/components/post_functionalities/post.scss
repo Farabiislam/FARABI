@@ -1,0 +1,202 @@
+@import "../../style.scss";
+
+.post {
+  @include themify($themes) {
+    background-color: themed("bg");
+    color: themed("textColor");
+    box-shadow: 0.1rem 0.2rem 1.2rem -0.2rem rgba(9, 11, 13, 0.51);
+    -webkit-box-shadow: 0.1rem 0.2rem 1.2rem -0.2rem rgba(9, 11, 13, 0.51);
+    -moz-box-shadow: 0.1rem 0.2rem 1.2rem -0.2rem rgba(9, 11, 13, 0.51);
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+    position: relative;
+    .container {
+      padding: 2rem;
+      .user {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        .userInfo {
+          display: flex;
+          gap: 1rem;
+          img {
+            height: 4rem;
+            width: 4rem;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+            object-fit: cover;
+          }
+          .details {
+            display: flex;
+            flex-direction: column;
+            .name {
+              font-weight: bold;
+              font-size: 1.8rem;
+            }
+            .date {
+              font-size: 1.2rem;
+            }
+          }
+        }
+        .more-btn {
+          cursor: pointer;
+          width: 2rem;
+          height: 2rem;
+          padding: 1rem;
+          border-radius: 50%;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          -ms-border-radius: 50%;
+          -o-border-radius: 50%;
+
+          &:hover {
+            background-color: themed("iconBg");
+          }
+        }
+      }
+      .content {
+        margin: 2rem 0rem;
+        font-size: 1.6rem;
+
+        img {
+          width: 100%;
+          max-height: 45rem;
+          object-fit: cover;
+          margin-top: 2rem;
+        }
+      }
+
+      .info {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        border-bottom: 0.1rem solid themed("border");
+        padding-bottom: 1.2rem;
+        position: relative;
+
+        .item-reactions {
+          span {
+            font-size: 1.6rem;
+          }
+          .reactions {
+            position: absolute;
+            top: -6.6rem;
+            left: 0rem;
+            display: flex;
+            height: 6rem;
+            align-items: center;
+            background-color: themed("bg");
+            border-radius: 5rem;
+            -webkit-border-radius: 5rem;
+            -moz-border-radius: 5rem;
+            -ms-border-radius: 5rem;
+            -o-border-radius: 5rem;
+            box-shadow: 0.1rem 0.2rem 1.2rem -0.2rem rgba(9, 11, 13, 0.51);
+            -webkit-box-shadow: 0.1rem 0.2rem 1.2rem -0.2rem rgba(9, 11, 13, 0.51);
+            -moz-box-shadow: 0.1rem 0.2rem 1.2rem -0.2rem rgba(9, 11, 13, 0.51);
+            transition: all 0.3s;
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            -ms-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            visibility: hidden;
+            .emoji {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              position: relative;
+              gap: 0.3rem;
+              transform: translate();
+              -webkit-transform: translate();
+              -moz-transform: translate();
+              -ms-transform: translate();
+              -o-transform: translate();
+
+              .emoji-item {
+                p {
+                  position: absolute;
+                  background-color: themed("iconBg");
+                  color: themed("textColor");
+                  top: -3.5rem;
+                  padding: 0.4rem 1rem;
+                  border-radius: 1rem;
+                  -webkit-border-radius: 1rem;
+                  -moz-border-radius: 1rem;
+                  -ms-border-radius: 1rem;
+                  -o-border-radius: 1rem;
+                  visibility: hidden;
+                }
+
+                img {
+                  width: 6.7rem;
+                  transition: all 0.3s;
+                  -webkit-transition: all 0.3s;
+                  -moz-transition: all 0.3s;
+                  -ms-transition: all 0.3s;
+                  -o-transition: all 0.3s;
+                  z-index: 3;
+                  &:hover {
+                    transform: translateY(-10%) scale(1.3);
+                    -webkit-transform: translateY(-10%) scale(1.3);
+                    -moz-transform: translateY(-10%) scale(1.3);
+                    -ms-transform: translateY(-10%) scale(1.3);
+                    -o-transform: translateY(-10%) scale(1.3);
+                  }
+                }
+                &:hover {
+                  p {
+                    visibility: visible;
+                  }
+                }
+              }
+            }
+          }
+
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          cursor: pointer;
+          font-size: 1.4rem;
+          padding: 0.5rem 2rem;
+          border-radius: 0.5rem;
+          -webkit-border-radius: 0.5rem;
+          -moz-border-radius: 0.5rem;
+          -ms-border-radius: 0.5rem;
+          -o-border-radius: 0.5rem;
+          &:hover {
+            background-color: themed("iconBg");
+            .reactions {
+              visibility: visible;
+            }
+          }
+        }
+        .item {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          cursor: pointer;
+          font-size: 1.6rem;
+          padding: 0.5rem 2rem;
+          border-radius: 0.5rem;
+          -webkit-border-radius: 0.5rem;
+          -moz-border-radius: 0.5rem;
+          -ms-border-radius: 0.5rem;
+          -o-border-radius: 0.5rem;
+          &:hover {
+            background-color: themed("iconBg");
+          }
+        }
+      }
+      .cmt {
+        margin-top: 1rem;
+      }
+    }
+  }
+}

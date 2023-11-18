@@ -1,0 +1,125 @@
+* {
+  margin: 0%;
+}
+::-moz-placeholder {
+  color: rgb(60, 32, 161);
+}
+::-webkit-input-placeholder {
+  color: rgb(60, 32, 161);
+}
+
+.login {
+  height: 100vh;
+  background-color: #1b1616;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .card {
+    width: 60%;
+    display: flex;
+    min-height: 65rem;
+    background-color: white;
+    border-radius: 1rem;
+    overflow: hidden;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    .left {
+      flex: 1;
+      background-size: cover;
+      padding: 4rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      color: white;
+      justify-content: center;
+      border-right: 0.1rem solid rgb(60, 32, 161);
+
+      ._logo {
+        text-decoration: none;
+        letter-spacing: 0.2rem;
+        font-weight: bold;
+        font-size: 2rem;
+        color: #0866ff;
+        font-style: italic;
+
+        span {
+          background-color: #0866ff;
+          color: white;
+          padding: 0.2rem 0.8rem;
+          border-radius: 50%;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          -ms-border-radius: 50%;
+          -o-border-radius: 50%;
+          font-size: 2.8rem;
+        }
+      }
+      p {
+        padding-bottom: 5rem;
+        font-size: 1.2rem;
+        color: #938eef;
+      }
+      span {
+        font-size: 1.4rem;
+        color: #938eef;
+      }
+
+      button {
+        width: 15rem;
+        padding: 1rem;
+        border: none;
+        background-color: #938eef;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 0.5rem;
+        -webkit-border-radius: 0.5rem;
+        -moz-border-radius: 0.5rem;
+        -ms-border-radius: 0.5rem;
+        -o-border-radius: 0.5rem;
+      }
+    }
+
+    .right {
+      flex: 1;
+      padding: 4rem;
+      display: flex;
+      flex-direction: column;
+      gap: 4rem;
+      justify-content: center;
+
+      h1 {
+        color: rgb(60, 32, 161);
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+
+        input {
+          border: none;
+          color: #555;
+          border-bottom: 0.1rem solid lightgray;
+          padding: 1rem 1rem;
+          outline: none;
+          background-color: transparent;
+        }
+
+        button {
+          width: 50%;
+          padding: 1rem;
+          border: none;
+          background-color: #938eef;
+          color: white;
+          font-weight: bold;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

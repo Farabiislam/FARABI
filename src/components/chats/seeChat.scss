@@ -1,0 +1,63 @@
+@import "../../style.scss";
+
+.see_chat {
+  @include themify($themes) {
+    z-index: 999;
+    background-color: themed("bg");
+    color: themed("textColor");
+    top: 7rem;
+    width: 38rem;
+    height: calc(95vh - 7rem);
+    position: absolute;
+    right: -5rem;
+    padding: 1.1rem;
+    box-shadow: 0rem 0.2rem 1.2rem -0.2rem rgba(9, 11, 13, 0.51);
+    -webkit-box-shadow: 0rem 0.2rem 1.2rem -0.2rem rgba(9, 11, 13, 0.51);
+    -moz-box-shadow: 0rem 0.2rem 1.2rem -0.2rem rgba(9, 11, 13, 0.51);
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+    border-bottom: 0.1rem solid themed("border");
+    @include mobile {
+      margin-right: 2.5rem;
+      width: 44rem;
+      height: 85vh;
+    }
+
+    .heading_div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      padding: 1rem;
+
+      span {
+        font-weight: bold;
+        font-size: 1.8rem;
+      }
+      .button {
+        border: none;
+        width: 3rem;
+        height: 3rem;
+        padding: 0.5rem;
+        border-radius: 5rem;
+        -webkit-border-radius: 5rem;
+        -moz-border-radius: 5rem;
+        -ms-border-radius: 5rem;
+        -o-border-radius: 5rem;
+        &:hover {
+          background-color: themed("iconBg");
+        }
+      }
+    }
+
+    .dumy {
+      font-weight: bold;
+      margin-top: 20rem;
+      text-align: center;
+      font-size: 1.6rem;
+    }
+  }
+}

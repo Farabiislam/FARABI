@@ -1,0 +1,98 @@
+@import "../../style.scss";
+
+.share {
+  @include themify($themes) {
+    box-shadow: 0.1rem 0.2rem 1.2rem -0.2rem rgba(9, 11, 13, 0.51);
+    -webkit-box-shadow: 0.1rem 0.2rem 1.2rem -0.2rem rgba(9, 11, 13, 0.51);
+    -moz-box-shadow: 0.1rem 0.2rem 1.2rem -0.2rem rgba(9, 11, 13, 0.51);
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    background-color: themed("bg");
+    color: themed("textColor");
+    margin-bottom: 2rem;
+    position: relative;
+    .container {
+      padding: 2rem;
+
+      .top {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        border-bottom: 0.1rem solid themed("border");
+        margin-bottom: 1.2rem;
+        padding-bottom: 1.5rem;
+        img {
+          width: 4rem;
+          height: 4rem;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+
+        input {
+          border: none;
+          outline: none;
+          padding: 1.5rem 1rem;
+          background-color: themed("iconBg");
+          width: 85%;
+          color: themed("textColor");
+          border-radius: 5rem;
+          -webkit-border-radius: 5rem;
+          -moz-border-radius: 5rem;
+          -ms-border-radius: 5rem;
+          -o-border-radius: 5rem;
+          &::placeholder {
+            color: themed("textColor");
+          }
+          &:hover {
+            background: themed("hvr");
+            cursor: pointer;
+          }
+        }
+      }
+
+      .bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .left {
+          display: flex;
+          align-items: center;
+          gap: 2rem;
+
+          .item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            cursor: pointer;
+
+            img {
+              height: 2rem;
+            }
+
+            span {
+              font-size: 1.2rem;
+              color: gray;
+            }
+          }
+        }
+        .right {
+          button {
+            border: none;
+            padding: 0.5rem;
+            color: white;
+            cursor: pointer;
+            background-color: #5271ff;
+            border-radius: 0.3rem;
+            -webkit-border-radius: 0.3rem;
+            -moz-border-radius: 0.3rem;
+            -ms-border-radius: 0.3rem;
+            -o-border-radius: 0.3rem;
+          }
+        }
+      }
+    }
+  }
+}

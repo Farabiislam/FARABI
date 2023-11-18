@@ -1,0 +1,85 @@
+@import "../../style.scss";
+
+._stories {
+  @include themify($themes) {
+    background-color: themed("bgSoft");
+    .stories-container {
+      top: 7rem;
+      height: calc(100vh - 7rem);
+      display: flex;
+      color: themed("textColor");
+
+      .g-left-side {
+        margin: 1rem 0rem 1rem 1rem;
+        flex: 3;
+        padding: 2rem;
+        background-color: themed("bg");
+        box-shadow: 0rem 0.2rem 1.2rem -0.2rem rgba(9, 11, 13, 0.51);
+        -webkit-box-shadow: 0rem 0.2rem 1.2rem -0.2rem rgba(9, 11, 13, 0.51);
+        -moz-box-shadow: 0rem 0.2rem 1.2rem -0.2rem rgba(9, 11, 13, 0.51);
+        border-radius: 0.5rem 0rem 0rem 0.5rem;
+        -webkit-border-radius: 0.5rem 0rem 0rem 0.5rem;
+        -moz-border-radius: 0.5rem 0rem 0rem 0.5rem;
+        -ms-border-radius: 0.5rem 0rem 0rem 0.5rem;
+        -o-border-radius: 0.5rem 0rem 0rem 0.5rem;
+        .l-heading {
+          font-size: 2.5rem;
+          font-weight: bold;
+          padding: 1rem;
+        }
+      }
+      .g-right-side {
+        display: flex;
+        margin: 1rem 1rem 1rem 0.5rem;
+        flex: 11;
+        padding: 1rem;
+        justify-content: center;
+        background-color: themed("bg");
+        box-shadow: 0rem 0.2rem 1.2rem -0.2rem rgba(9, 11, 13, 0.51);
+        -webkit-box-shadow: 0rem 0.2rem 1.2rem -0.2rem rgba(9, 11, 13, 0.51);
+        -moz-box-shadow: 0rem 0.2rem 1.2rem -0.2rem rgba(9, 11, 13, 0.51);
+        border-radius: 0rem 0.5rem 0.5rem 0rem;
+        -webkit-border-radius: 0rem 0.5rem 0.5rem 0rem;
+        -moz-border-radius: 0rem 0.5rem 0.5rem 0rem;
+        -ms-border-radius: 0rem 0.5rem 0.5rem 0rem;
+        -o-border-radius: 0rem 0.5rem 0.5rem 0rem;
+        ._stories_slide {
+          .slides {
+            width: 58rem;
+            height: 68rem;
+            padding: 4rem;
+
+            ._story {
+              @include mobile {
+                width: 10rem;
+                height: 15rem;
+              }
+              width: 50rem;
+              height: 65rem;
+              border-radius: 1rem;
+              -webkit-border-radius: 1rem;
+              -moz-border-radius: 1rem;
+              -ms-border-radius: 1rem;
+              -o-border-radius: 1rem;
+
+              img {
+                @include mobile {
+                  width: 10rem;
+                  height: 15rem;
+                }
+                width: 50rem;
+                height: 65rem;
+                border-radius: 1rem;
+                -webkit-border-radius: 1rem;
+                -moz-border-radius: 1rem;
+                -ms-border-radius: 1rem;
+                -o-border-radius: 1rem;
+                object-fit: cover;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

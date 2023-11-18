@@ -1,0 +1,237 @@
+@import "../../style.scss";
+
+.navbar {
+  @include themify($themes) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    height: 5rem;
+    // border-bottom: 1rem solid rgb(226, 224, 224);
+    position: sticky;
+    top: 0;
+    background-color: themed("bg");
+    color: themed("textColor");
+    z-index: 999;
+    box-shadow: 0rem 0.2rem 1.2rem -0.2rem rgba(9, 11, 13, 0.51);
+    -webkit-box-shadow: 0rem 0.2rem 1.2rem -0.2rem rgba(9, 11, 13, 0.51);
+    -moz-box-shadow: 0rem 0.2rem 1.2rem -0.2rem rgba(9, 11, 13, 0.51);
+
+    @include mobile {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0rem;
+      height: 9.5rem;
+      top: 0;
+      position: sticky;
+    }
+
+    .left {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+
+      .logo {
+       
+        text-decoration: none;
+        color: themed("textColor");
+        letter-spacing: 0.2rem;
+        font-weight: bold;
+        font-size: 1.5rem;
+        color: #0866ff;
+        font-style: italic;
+        span {
+          background-color: #0866ff;
+          color: white;
+          padding: 0.2rem 0.8rem;
+          border-radius: 50%;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          -ms-border-radius: 50%;
+          -o-border-radius: 50%;
+          font-size: 2.5rem;
+        }
+      }
+      @include mobile {
+        display: flex;
+        gap: 2rem;
+        width: 42.4rem;
+        align-items: center;
+        padding: 0.5rem 1rem;
+      }
+      .m_div1 {
+        @include mobile {
+          display: block;
+          display: flex;
+          gap: 1rem;
+
+          .m_search {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.2rem 0.3rem;
+            outline: none;
+            border-radius: 1rem;
+            -webkit-border-radius: 1rem;
+            -moz-border-radius: 1rem;
+            -ms-border-radius: 1rem;
+            -o-border-radius: 1rem;
+            background-color: themed(iconBg);
+            input {
+              border: 0.3rem outset themed("border");
+              background-color: transparent;
+              outline: none;
+              border: none;
+              color: themed("textColor");
+              &::placeholder {
+                color: themed("textColor");
+              }
+            }
+          }
+          .icon {
+            color: themed("textColor");
+            cursor: pointer;
+            background-color: themed("iconBg");
+            padding: 0.8rem;
+            height: 1.5rem;
+            width: 1.5rem;
+            border-radius: 5rem;
+            -webkit-border-radius: 5rem;
+            -moz-border-radius: 5rem;
+            -ms-border-radius: 5rem;
+            -o-border-radius: 5rem;
+          }
+        }
+
+        display: none;
+      }
+      .m-icon {
+        @include mobile {
+          visibility: hidden;
+        }
+      }
+
+      .home-icon {
+        text-decoration: none;
+        color: themed("textColor");
+        padding-top: 0.2rem;
+        font-size: 2.5rem;
+      }
+      .icon {
+        cursor: pointer;
+        font-size: 2.2rem;
+      }
+      span {
+        font-weight: bold;
+        font-size: 2rem;
+        color: themed("logo");
+      }
+      .search {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        border: 0.1rem solid themed("border");
+        border-radius: 5rem;
+        -webkit-border-radius: 5rem;
+        -moz-border-radius: 5rem;
+        -ms-border-radius: 5rem;
+        -o-border-radius: 5rem;
+        padding: 0.5rem 1rem;
+        background-color: themed("iconBg");
+        @include mobile {
+          display: none;
+        }
+
+        input {
+          border: none;
+          width: 45rem;
+          outline: none;
+          background-color: transparent;
+          color: themed("textColor");
+          &::placeholder {
+            color: themed("textColor");
+          }
+        }
+      }
+    }
+
+    .right {
+      @include mobile {
+        margin-right: 0rem;
+        display: flex;
+        gap: 4rem;
+        margin-right: 5rem;
+        position: relative;
+        padding: 0.5rem 2rem;
+      }
+      .m-div {
+        @include mobile {
+          display: block;
+          display: flex;
+          align-items: center;
+          padding-top: 0.4rem;
+        }
+        .m-icon {
+          text-decoration: none;
+          color: themed("textColor");
+          cursor: pointer;
+          background-color: themed("iconBg");
+          padding: 1rem;
+          height: 1.5rem;
+          width: 1.5rem;
+          border-radius: 5rem;
+          -webkit-border-radius: 5rem;
+          -moz-border-radius: 5rem;
+          -ms-border-radius: 5rem;
+          -o-border-radius: 5rem;
+        }
+        display: flex;
+        gap: 4rem;
+        display: none;
+      }
+
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      margin-right: 5rem;
+      position: relative;
+
+      .icon {
+        @include mobile {
+          height: 1.5rem;
+          width: 1.5rem;
+        }
+        cursor: pointer;
+        background-color: themed("iconBg");
+        padding: 1rem;
+        height: 2rem;
+        width: 2rem;
+        border-radius: 5rem;
+        -webkit-border-radius: 5rem;
+        -moz-border-radius: 5rem;
+        -ms-border-radius: 5rem;
+        -o-border-radius: 5rem;
+      }
+
+      .user {
+        img {
+          @include mobile {
+            width: 3.2rem;
+            height: 3.2rem;
+          }
+          width: 3.8rem;
+          height: 3.8rem;
+          object-fit: cover;
+          border: 0.2rem solid themed("border");
+          border-radius: 5rem;
+          -webkit-border-radius: 5rem;
+          -moz-border-radius: 5rem;
+          -ms-border-radius: 5rem;
+          -o-border-radius: 5rem;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

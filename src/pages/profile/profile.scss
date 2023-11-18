@@ -1,0 +1,234 @@
+@import "../../style.scss";
+
+.background {
+  @include themify($themes) {
+    background-color: themed("bgSoft");
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .ownProfile {
+      padding-top: 0.5rem;
+      width: 85%;
+      .images {
+        width: 100%;
+        height: 35rem;
+        position: relative;
+
+        .cover {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 0.5rem 0.5rem 0rem 0rem;
+          -webkit-border-radius: 0.5rem 0.5rem 0rem 0rem;
+          -moz-border-radius: 0.5rem 0.5rem 0rem 0rem;
+          -ms-border-radius: 0.5rem 0.5rem 0rem 0rem;
+          -o-border-radius: 0.5rem 0.5rem 0rem 0rem;
+          box-shadow: 0rem 0.2rem 1.2rem -0.2rem rgba(9, 11, 13, 0.51);
+          -webkit-box-shadow: 0rem 0.2rem 1.2rem -0.2rem rgba(9, 11, 13, 0.51);
+          -moz-box-shadow: 0rem 0.2rem 1.2rem -0.2rem rgba(9, 11, 13, 0.51);
+        }
+
+        .profilePic {
+          width: 20rem;
+          height: 20rem;
+          object-fit: cover;
+          position: absolute;
+          left: 4rem;
+          top: 25rem;
+          border: 0.4rem solid themed("bgSoft");
+          border-radius: 50%;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          -ms-border-radius: 50%;
+          -o-border-radius: 50%;
+          z-index: 2;
+        }
+      }
+
+      .profileContainer {
+        padding-top: 0.8rem;
+        margin-bottom: 1rem;
+        box-shadow: 0rem 0.2rem 1.2rem -0.2rem rgba(9, 11, 13, 0.51);
+        -webkit-box-shadow: 0rem 0.2rem 1.2rem -0.2rem rgba(9, 11, 13, 0.51);
+        -moz-box-shadow: 0rem 0.2rem 1.2rem -0.2rem rgba(9, 11, 13, 0.51);
+
+        .userInfo {
+          position: relative;
+          height: 21rem;
+          background-color: themed("bg");
+          color: themed("textColor");
+          padding: 2rem;
+          border-radius: 0rem 0rem 0.5rem 0.5rem;
+          -webkit-border-radius: 0rem 0rem 0.5rem 0.5rem;
+          -moz-border-radius: 0rem 0rem 0.5rem 0.5rem;
+          -ms-border-radius: 0rem 0rem 0.5rem 0.5rem;
+          -o-border-radius: 0rem 0rem 0.5rem 0.5rem;
+          .left {
+            padding: 2rem;
+            margin-top: 6rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+
+            .name-bio {
+              display: flex;
+              flex-direction: column;
+              gap: 0.5rem;
+              span {
+                font-size: 4rem;
+                font-weight: bold;
+              }
+            }
+          }
+          .right {
+            display: flex;
+            position: absolute;
+            top: 15.5rem;
+            right: 5rem;
+            cursor: pointer;
+            gap: 0.2rem;
+            button {
+              padding: 0.5rem 1.5rem;
+              font-size: 1.2rem;
+              border: none;
+              cursor: pointer;
+            }
+            .btn-1 {
+              font-weight: bold;
+              display: flex;
+              gap: 0.5rem;
+              font-size: 1.4rem;
+              align-items: center;
+              background-color: #5271ff;
+              color: white;
+              border-radius: 0.5rem 0rem 0rem 0.5rem;
+              -webkit-border-radius: 0.5rem 0rem 0rem 0.5rem;
+              -moz-border-radius: 0.5rem 0rem 0rem 0.5rem;
+              -ms-border-radius: 0.5rem 0rem 0rem 0.5rem;
+              -o-border-radius: 0.5rem 0rem 0rem 0.5rem;
+              &:focus {
+                background-color: #5272ffdc;
+              }
+            }
+            .btn-2 {
+              font-weight: bold;
+              display: flex;
+              gap: 0.5rem;
+              font-size: 1.4rem;
+              align-items: center;
+            }
+            .btn-3 {
+              border-radius: 0rem 0.5rem 0.5rem 0rem;
+              -webkit-border-radius: 0rem 0.5rem 0.5rem 0rem;
+              -moz-border-radius: 0rem 0.5rem 0.5rem 0rem;
+              -ms-border-radius: 0rem 0.5rem 0.5rem 0rem;
+              -o-border-radius: 0rem 0.5rem 0.5rem 0rem;
+            }
+          }
+        }
+      }
+    }
+
+    .edit-info {
+      width: 85%;
+      display: flex;
+      gap: 1rem;
+      padding-bottom: 2rem;
+      .info-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        flex: 1;
+        .info-e {
+          display: flex;
+          flex-direction: column;
+          background-color: themed("bg");
+          color: themed("textColor");
+          gap: 1.5rem;
+          padding: 2rem 3rem;
+          box-shadow: 0rem 0.2rem 1.2rem -0.2rem rgba(9, 11, 13, 0.51);
+          -webkit-box-shadow: 0rem 0.2rem 1.2rem -0.2rem rgba(9, 11, 13, 0.51);
+          -moz-box-shadow: 0rem 0.2rem 1.2rem -0.2rem rgba(9, 11, 13, 0.51);
+          border-radius: 0.5rem;
+          -webkit-border-radius: 0.5rem;
+          -moz-border-radius: 0.5rem;
+          -ms-border-radius: 0.5rem;
+          -o-border-radius: 0.5rem;
+          .item {
+            display: flex;
+            gap: 0.5rem;
+            font-size: 1.7rem;
+          }
+
+          .social-link {
+            display: flex;
+            gap: 1rem;
+            a {
+              text-decoration: none;
+              color: themed("textColor");
+            }
+          }
+        }
+        .photo {
+          padding: 2rem;
+          background-color: themed("bg");
+          color: themed("textColor");
+          box-shadow: 0rem 0.2rem 1.2rem -0.2rem rgba(9, 11, 13, 0.51);
+          -webkit-box-shadow: 0rem 0.2rem 1.2rem -0.2rem rgba(9, 11, 13, 0.51);
+          -moz-box-shadow: 0rem 0.2rem 1.2rem -0.2rem rgba(9, 11, 13, 0.51);
+          border-radius: 0.5rem;
+          -webkit-border-radius: 0.5rem;
+          -moz-border-radius: 0.5rem;
+          -ms-border-radius: 0.5rem;
+          -o-border-radius: 0.5rem;
+          span {
+            font-weight: bold;
+          }
+          .photo_container {
+            height: 39rem;
+            overflow: hidden;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            padding-top: 1rem;
+
+            .item {
+              background-color: themed("iconBg");
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              object-fit: cover;
+              height: 12rem;
+              width: 12rem;
+              overflow: hidden;
+            }
+          }
+          .edt {
+            font-size: 1.2rem;
+            padding: 0.5rem 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 2rem;
+            border: none;
+            border-radius: 0.5rem;
+            -webkit-border-radius: 0.5rem;
+            -moz-border-radius: 0.5rem;
+            -ms-border-radius: 0.5rem;
+            -o-border-radius: 0.5rem;
+          }
+        }
+      }
+
+      .share-post {
+        flex: 2;
+        height: 136rem;
+        overflow-x: scroll;
+        @include hideScrollbar;
+        post-cls {
+        }
+      }
+    }
+  }
+}

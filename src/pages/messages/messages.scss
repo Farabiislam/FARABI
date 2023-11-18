@@ -1,0 +1,557 @@
+@import "../../style.scss";
+
+.messages {
+  @include themify($themes) {
+    background-color: themed("bgSoft");
+    .messages-container {
+      top: 7rem;
+      height: calc(100vh - 7rem);
+      display: flex;
+      color: themed("textColor");
+      overflow: hidden;
+
+      .message-left-side {
+        margin: 1rem 0rem 1rem 1rem;
+        flex: 3;
+        padding: 1rem;
+        background-color: themed("bg");
+        box-shadow: 0rem 0.2rem 1.2rem -0.2rem rgba(9, 11, 13, 0.51);
+        -webkit-box-shadow: 0rem 0.2rem 1.2rem -0.2rem rgba(9, 11, 13, 0.51);
+        -moz-box-shadow: 0rem 0.2rem 1.2rem -0.2rem rgba(9, 11, 13, 0.51);
+        border-radius: 0.5rem 0rem 0rem 0.5rem;
+        -webkit-border-radius: 0.5rem 0rem 0rem 0.5rem;
+        -moz-border-radius: 0.5rem 0rem 0rem 0.5rem;
+        -ms-border-radius: 0.5rem 0rem 0rem 0.5rem;
+        -o-border-radius: 0.5rem 0rem 0rem 0.5rem;
+        .m-heading {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 1rem;
+
+          span {
+            font-size: 2.5rem;
+            font-weight: bold;
+          }
+          .more {
+            cursor: pointer;
+            width: 2rem;
+            height: 2rem;
+            padding: 1rem;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+
+            &:hover {
+              background-color: themed("iconBg");
+            }
+          }
+        }
+
+        .search {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          border: 0.1rem solid themed("border");
+          border-radius: 5rem;
+          -webkit-border-radius: 5rem;
+          -moz-border-radius: 5rem;
+          -ms-border-radius: 5rem;
+          -o-border-radius: 5rem;
+          padding: 0.6rem 1rem;
+          background-color: themed("iconBg");
+          input {
+            border: none;
+            width: 20rem;
+            outline: none;
+            background-color: transparent;
+            color: themed("textColor");
+            &::placeholder {
+              color: themed("textColor");
+            }
+          }
+          &:hover {
+            background-color: transparent;
+          }
+        }
+
+        .message-list {
+          @include hideScrollbar;
+          border-top: .1rem solid themed("border");
+          margin: 1.5rem 0rem;
+          padding-top: 0.6rem;
+          height: 80%;
+          overflow: scroll;
+          .user {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            gap: 1rem;
+            .user-options {
+              cursor: pointer;
+              width: 2rem;
+              height: 2rem;
+              padding: 1rem;
+              border-radius: 50%;
+              -webkit-border-radius: 50%;
+              -moz-border-radius: 50%;
+              -ms-border-radius: 50%;
+              -o-border-radius: 50%;
+              visibility: hidden;
+              &:hover {
+                background-color: themed("hvr");
+              }
+            }
+            &:hover {
+              background: themed("iconBg");
+              border-radius: 0.5rem;
+              -webkit-border-radius: 0.5rem;
+              -moz-border-radius: 0.5rem;
+              -ms-border-radius: 0.5rem;
+              -o-border-radius: 0.5rem;
+              cursor: pointer;
+              .user-options {
+                visibility: visible;
+              }
+            }
+
+            .userPic {
+              display: flex;
+              align-items: center;
+              gap: 1rem;
+              position: relative;
+              .online {
+                height: 1.1rem;
+                width: 1.1rem;
+                border-radius: 50%;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                -ms-border-radius: 50%;
+                -o-border-radius: 50%;
+                background-color: limegreen;
+                position: absolute;
+                bottom: 0;
+                left: 3rem;
+              }
+              img {
+                width: 4rem;
+                height: 4rem;
+                border-radius: 50%;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                -ms-border-radius: 50%;
+                -o-border-radius: 50%;
+                object-fit: cover;
+              }
+
+              P {
+                color: themed("textColorSoft");
+                font-size: 1.2rem;
+                small {
+                  color: themed("textColorSoft");
+                }
+              }
+            }
+            .userInfo {
+              display: flex;
+              flex-direction: column;
+              .user-name {
+                font-weight: bold;
+                color: themed("textColor");
+                font-size: 1.6rem;
+                width: 20rem;
+                overflow: hidden;
+              }
+              .user-mesg {
+                color: themed("textColorSoft");
+                display: flex;
+                overflow: hidden;
+                height: 2rem;
+                .txt {
+                  width: 22rem;
+                  font-size: 1.4rem;
+                }
+                .time {
+                  font-size: 1rem;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      /*    right side */
+
+      .message-right-side {
+        margin: 1rem 1rem 1rem 0.3rem;
+        display: flex;
+        gap: 0.3rem;
+        flex: 11;
+        background-color: themed("bgSoft");
+
+        .selected_messages_container {
+          width: 100%;
+          background-color: themed("bg");
+          overflow: hidden;
+          box-shadow: 0rem 0.2rem 1.2rem -0.2rem rgba(9, 11, 13, 0.51);
+          -webkit-box-shadow: 0rem 0.2rem 1.2rem -0.2rem rgba(9, 11, 13, 0.51);
+          -moz-box-shadow: 0rem 0.2rem 1.2rem -0.2rem rgba(9, 11, 13, 0.51);
+          border-radius: 0rem 0.5rem 0.5rem 0rem;
+          -webkit-border-radius: 0rem 0.5rem 0.5rem 0rem;
+          -moz-border-radius: 0rem 0.5rem 0.5rem 0rem;
+          -ms-border-radius: 0rem 0.5rem 0.5rem 0rem;
+          -o-border-radius: 0rem 0.5rem 0.5rem 0rem;
+          .heading_option {
+            height: 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 0.1rem solid themed("border");
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            -webkit-border-radius: 0.5rem;
+            -moz-border-radius: 0.5rem;
+            -ms-border-radius: 0.5rem;
+            -o-border-radius: 0.5rem;
+            .user {
+              display: flex;
+              padding: 0.6rem 1rem;
+              gap: 1rem;
+              width: 20rem;
+              align-items: center;
+              &:hover {
+                background: themed("iconBg");
+                border-radius: 0.5rem;
+                -webkit-border-radius: 0.5rem;
+                -moz-border-radius: 0.5rem;
+                -ms-border-radius: 0.5rem;
+                -o-border-radius: 0.5rem;
+                cursor: pointer;
+              }
+
+              .userPic {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                position: relative;
+                .online {
+                  height: 1.1rem;
+                  width: 1.1rem;
+                  border-radius: 50%;
+                  -webkit-border-radius: 50%;
+                  -moz-border-radius: 50%;
+                  -ms-border-radius: 50%;
+                  -o-border-radius: 50%;
+                  background-color: limegreen;
+                  position: absolute;
+                  bottom: 0;
+                  left: 3rem;
+                }
+                img {
+                  width: 4rem;
+                  height: 4rem;
+                  border-radius: 50%;
+                  -webkit-border-radius: 50%;
+                  -moz-border-radius: 50%;
+                  -ms-border-radius: 50%;
+                  -o-border-radius: 50%;
+                  object-fit: cover;
+                }
+              }
+              .userInfo {
+                display: flex;
+                flex-direction: column;
+                .user-name {
+                  font-weight: bold;
+                  color: themed("textColor");
+                  font-size: 1.6rem;
+                  width: 20rem;
+                  overflow: hidden;
+                }
+                .txt {
+                  font-size: 1rem;
+                  color: themed("textColorSoft");
+                }
+              }
+            }
+
+            .more_option {
+              display: flex;
+              align-items: center;
+              gap: 1rem;
+
+              .user-options {
+                cursor: pointer;
+                width: 2rem;
+                height: 2rem;
+                padding: 1rem;
+                border-radius: 50%;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                -ms-border-radius: 50%;
+                -o-border-radius: 50%;
+                background-color: themed("iconBg");
+
+                &:hover {
+                  background-color: themed("hvr");
+                }
+              }
+            }
+          }
+
+          /* messages */
+
+          .messages_box {
+            height: 72%;
+            padding: 2rem 1.5rem;
+            overflow: scroll;
+            .mesg {
+              display: flex;
+              gap: 0.5rem;
+              margin-bottom: 2rem;
+              align-items: flex-end;
+
+              .mesgInfo {
+                display: flex;
+                flex-direction: column;
+                color: themed("textColorSoft");
+                font-weight: 300;
+
+                img {
+                  width: 2.5rem;
+                  height: 2.5rem;
+                  object-fit: cover;
+                  border-radius: 50%;
+                  -webkit-border-radius: 50%;
+                  -moz-border-radius: 50%;
+                  -ms-border-radius: 50%;
+                  -o-border-radius: 50%;
+                }
+              }
+              .mesg_content {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                max-width: 50%;
+                p {
+                  background-color: themed("bgSoft");
+                  font-size: 1.6rem;
+                  padding: 1rem 2rem;
+                  border-radius: 1rem;
+                  -webkit-border-radius: 1rem;
+                  -moz-border-radius: 1rem;
+                  -ms-border-radius: 1rem;
+                  -o-border-radius: 1rem;
+                  max-width: max-content;
+                }
+                img {
+                  width: 40%;
+                  border-radius: 1rem;
+                  -webkit-border-radius: 1rem;
+                  -moz-border-radius: 1rem;
+                  -ms-border-radius: 1rem;
+                  -o-border-radius: 1rem;
+                }
+                video {
+                  width: 40%;
+                }
+              }
+              &.owner {
+                flex-direction: row-reverse;
+                .mesg_content {
+                  align-items: flex-end;
+                  p {
+                    border-radius: 1rem;
+                    -webkit-border-radius: 1rem;
+                    -moz-border-radius: 1rem;
+                    -ms-border-radius: 1rem;
+                    -o-border-radius: 1rem;
+                    background-color: rgba(5, 101, 255, 0.527);
+                  }
+                }
+              }
+            }
+          }
+          .send_options {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            padding: 0rem 1rem;
+            height: 10%;
+            border-top: 0.1rem solid themed("border");
+            border-radius: 0.5rem;
+            -webkit-border-radius: 0.5rem;
+            -moz-border-radius: 0.5rem;
+            -ms-border-radius: 0.5rem;
+            -o-border-radius: 0.5rem;
+            .left {
+              flex: 1;
+              display: flex;
+              gap: 0.8rem;
+              justify-content: center;
+              cursor: pointer;
+              color: #0866ff;
+              cursor: pointer;
+            }
+            .write-message {
+              flex: 8;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              border-radius: 5rem;
+              -webkit-border-radius: 5rem;
+              -moz-border-radius: 5rem;
+              -ms-border-radius: 5rem;
+              -o-border-radius: 5rem;
+              padding: 0.6rem 1rem;
+              position: relative;
+              background-color: themed("iconBg");
+              .emoji_piker {
+                position: absolute;
+                z-index: 1;
+                bottom: 5.5rem;
+                right: -5rem;
+              }
+
+              input {
+                border: none;
+                width: 90%;
+                outline: none;
+                background-color: transparent;
+                color: themed("textColor");
+                font-weight: bold;
+                &::placeholder {
+                  color: themed("textColor");
+                }
+              }
+              .add_react {
+                cursor: pointer;
+                padding: 0.2rem;
+                border-radius: 50%;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                -ms-border-radius: 50%;
+                -o-border-radius: 50%;
+                &:hover {
+                  background-color: #0866ff;
+                }
+              }
+            }
+            .right {
+              flex: 0.5;
+              display: flex;
+              justify-content: center;
+              cursor: pointer;
+              color: #0866ff;
+            }
+          }
+        }
+
+        .selected_message_info {
+          width: 40%;
+          display: flex;
+          gap: 2rem;
+          flex-direction: column;
+          align-items: center;
+          padding: 1rem;
+          background-color: themed("bg");
+          box-shadow: 0rem 0.2rem 1.2rem -0.2rem rgba(9, 11, 13, 0.51);
+          -webkit-box-shadow: 0rem 0.2rem 1.2rem -0.2rem rgba(9, 11, 13, 0.51);
+          -moz-box-shadow: 0rem 0.2rem 1.2rem -0.2rem rgba(9, 11, 13, 0.51);
+          border-radius: 0.5rem;
+          -webkit-border-radius: 0.5rem;
+          -moz-border-radius: 0.5rem;
+          -ms-border-radius: 0.5rem;
+          -o-border-radius: 0.5rem;
+          .user {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            .userPic {
+              img {
+                width: 7rem;
+                height: 7rem;
+                border-radius: 50%;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                -ms-border-radius: 50%;
+                -o-border-radius: 50%;
+                object-fit: cover;
+                border: 0.5rem solid themed("border");
+              }
+            }
+            .userInfo {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              gap: 0.4rem;
+              .user-name {
+                font-weight: bold;
+                color: themed("textColor");
+                font-size: 2rem;
+              }
+              .txt {
+                font-size: 1rem;
+                color: themed("textColorSoft");
+              }
+            }
+          }
+
+          .info_options {
+            display: flex;
+            gap: 2rem;
+
+            ._icon {
+              cursor: pointer;
+              width: 2rem;
+              height: 2rem;
+              padding: 1rem;
+              border-radius: 50%;
+              -webkit-border-radius: 50%;
+              -moz-border-radius: 50%;
+              -ms-border-radius: 50%;
+              -o-border-radius: 50%;
+              background-color: themed("iconBg");
+              &:hover {
+                background-color: themed("hvr");
+              }
+            }
+          }
+
+          .info_settings {
+            @include hideScrollbar;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            overflow-x: scroll;
+            .setting {
+              display: flex;
+              font-weight: bold;
+              font-size: 1.6rem;
+              align-items: center;
+              padding: 1rem;
+              justify-content: space-between;
+              &:hover {
+                background-color: themed("iconBg");
+                border-radius: 0.5rem;
+                -webkit-border-radius: 0.5rem;
+                -moz-border-radius: 0.5rem;
+                -ms-border-radius: 0.5rem;
+                -o-border-radius: 0.5rem;
+              }
+            }
+            .s_1 {
+            }
+            .s_2 {
+            }
+            .s_3 {
+            }
+          }
+        }
+      }
+    }
+  }
+}

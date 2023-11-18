@@ -1,0 +1,133 @@
+@import "../../style.scss";
+
+.stories {
+  @include themify($themes) {
+    @include mobile {
+      width: 45.8rem;
+      padding-top: 2rem;
+    }
+    width: 86.5rem;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+
+    .story {
+      @include mobile {
+        width: 10rem;
+        height: 15rem;
+      }
+      width: 20.6rem;
+      height: 26rem;
+      position: relative;
+      overflow: hidden;
+      border-radius: 1rem;
+      -webkit-border-radius: 1rem;
+      -moz-border-radius: 1rem;
+      -ms-border-radius: 1rem;
+      -o-border-radius: 1rem;
+      .blur {
+        filter: blur(0.2rem);
+        -webkit-filter: blur(0.2rem);
+        overflow: hidden;
+      }
+      .tag{
+        position: absolute;
+        z-index: 2;
+        bottom: 5.5rem;
+        left: 5.5rem;
+        font-size: 2rem;
+        font-weight: bold;
+        color: themed("textColor");
+
+      }
+      img {
+        @include mobile {
+          width: 10rem;
+          height: 15rem;
+        }
+        width: 20.6rem;
+        height: 26rem;
+        border-radius: 1rem;
+        -webkit-border-radius: 1rem;
+        -moz-border-radius: 1rem;
+        -ms-border-radius: 1rem;
+        -o-border-radius: 1rem;
+        position: relative;
+        object-fit: cover;
+        z-index: 1;
+        box-shadow: 0.1rem 0.2rem 1.2rem -0.2rem rgba(9, 11, 13, 0.51);
+        -webkit-box-shadow: 0.1rem 0.2rem 1.2rem -0.2rem rgba(9, 11, 13, 0.51);
+        -moz-box-shadow: 0.1rem 0.2rem 1.2rem -0.2rem rgba(9, 11, 13, 0.51);
+      }
+      .user_name {
+        @include mobile {
+          font-size: 1.2rem;
+        }
+        display: flex;
+        gap: 0.5rem;
+        position: absolute;
+        z-index: 2;
+        font-size: 1.4rem;
+        color: white;
+        bottom: 0.5rem;
+        padding: 0.5rem;
+        align-items: center;
+        text-decoration: none;
+        img {
+          @include mobile {
+            width: 2.8rem;
+            height: 2.8rem;
+          }
+          width: 3.8rem;
+          height: 3.8rem;
+          object-fit: cover;
+          border: 0.1rem solid white;
+          border-radius: 5rem;
+          -webkit-border-radius: 5rem;
+          -moz-border-radius: 5rem;
+          -ms-border-radius: 5rem;
+          -o-border-radius: 5rem;
+          cursor: pointer;
+        }
+        span {
+          font-weight: bold;
+        }
+      }
+      .button {
+        @include mobile {
+          width: 5.8rem;
+          height: 5.8rem;
+        }
+        display: flex;
+        text-decoration: none;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        color: themed("textColor");
+        background-color: inherit;
+        border: 0.2rem solid themed("textColor");
+        height: 8rem;
+        width: 8rem;
+        cursor: pointer;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        font-size: 5rem;
+        background: #00000048;
+        z-index: 2;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+@import "../../style.scss";
+
+.chat_info {
+  @include themify($themes) {
+    display: flex;
+    flex-direction: column;
+    background-color: themed("bgSoft");
+    padding: 1rem;
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+    .pin_txt {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      padding: 1rem;
+      font-size: 1.4rem;
+      border-radius: 0.5rem;
+      -webkit-border-radius: 0.5rem;
+      -moz-border-radius: 0.5rem;
+      -ms-border-radius: 0.5rem;
+      -o-border-radius: 0.5rem;
+      &:hover {
+        background-color: themed("iconBg");
+      }
+    }
+  }
+}

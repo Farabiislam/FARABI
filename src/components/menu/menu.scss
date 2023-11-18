@@ -1,0 +1,37 @@
+@import "../../style.scss";
+
+.apps {
+  @include themify($themes) {
+    z-index: 999;
+    background-color: themed("bg");
+    color: themed("textColor");
+    width: 90rem;
+    height: 61rem;
+    position: absolute;
+    overflow: scroll;
+    top: 7.5rem;
+    padding: 1.1rem;
+    box-shadow: 0.1rem 0.2rem 1.2rem -0.2rem rgba(9, 11, 13, 0.51);
+    -webkit-box-shadow: 0.1rem 0.2rem 1.2rem -0.2rem rgba(9, 11, 13, 0.51);
+    -moz-box-shadow: 0.1rem 0.2rem 1.2rem -0.2rem rgba(9, 11, 13, 0.51);
+    border-radius: .5rem;
+    -webkit-border-radius: .5rem;
+    -moz-border-radius: .5rem;
+    -ms-border-radius: .5rem;
+    -o-border-radius: .5rem;
+    border-bottom: .1rem solid themed("border");
+    .heading
+{
+      font-weight: bold;
+      padding: 1rem;
+      font-size: 1.8rem;
+    }
+
+    .container {
+      border-top: .1rem solid themed("border");
+      padding: 2rem;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
