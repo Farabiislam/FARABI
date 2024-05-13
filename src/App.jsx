@@ -27,12 +27,12 @@ import Gaming from "./pages/gaming/Gaming";
 import ProfileEdit from "./components/profile_edit/ProfileEdit";
 
 function App() {
-  const { currentUser } = useContext(AuthContext);
-
+ // const { currentUser } = useContext(AuthContext);
+     const currentUser = true;
   const { darkMode } = useContext(DarkMode);
 
   const { shareModal } = useContext(ProfileContext);
-  const { editModal } = useContext(ProfileContext);
+  const { editModal } = useContext(ProfileContext); 
  
 
   const Layout = () => {

@@ -25,7 +25,7 @@ const SeeChat = () => {
   return (
     <div className="see_chat">
       <div className="heading_div">
-        <CloseIcon className="button" onClick={seeChatToggle} />
+        <CloseIcon className="button"  onClick={seeChatToggle} />
       </div>
       <div className="_container">
         <div className="selected_messages_container ">

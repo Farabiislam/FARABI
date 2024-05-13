@@ -311,7 +311,7 @@
               display: flex;
               flex-direction: column;
               height: 20rem;
-              width: 12.2rem;
+              width: 12rem;
               overflow: hidden;
               border-radius: 0.5rem;
               -webkit-border-radius: 0.5rem;
@@ -358,7 +358,7 @@
 
       .share-post {
         flex: 2;
-        height: 160rem;
+        height: 164rem;
         overflow-x: scroll;
         @include hideScrollbar;
         .own_share {

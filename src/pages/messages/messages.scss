@@ -306,7 +306,8 @@
           .messages_box {
             height: 72%;
             padding: 2rem 1.5rem;
-            overflow: scroll;
+            overflow-y: scroll;
+            
             .mesg {
               display: flex;
               gap: 0.5rem;

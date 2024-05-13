@@ -78,6 +78,19 @@ const See_story = () => {
       <div className="stories-container">
         <div className="g-left-side">
           <div className="l-heading">Stories</div>
+       
+            <div className="online-story">
+              {stories.map((story) => (
+                <div className="user" key={story.id}>
+                  <div className="userInfo">
+                    <img src={story.userPic} alt="" />
+                    <div className="online" />
+                    <span>{story.name}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          
         </div>
         <div className="g-right-side">
           <div className="_stories_slide">
